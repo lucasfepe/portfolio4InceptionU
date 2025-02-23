@@ -1,0 +1,9 @@
+@import 'variables.css';
+@import 'base.css';
+@import 'components/navigation.css';
+@import 'components/hero.css';
+@import 'components/about.css';
+@import 'components/projects.css';
+@import 'components/contact.css';
+@import 'components/footer.css';
+@import 'animations.css';
