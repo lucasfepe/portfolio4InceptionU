@@ -5,6 +5,7 @@
     --nav-bg: #ffffff;
     --section-bg: #f8f8f8;
     --border-color: #ddd;
+    --header-height: 120px;
 }
 
 [data-theme="dark"] {
