@@ -19,14 +19,17 @@ export function initHeroEffects() {
 
     // Down Arrow functionality
     document.querySelector('.scroll-indicator button').addEventListener('click', () => {
-        const nextSection = document.querySelector('#home + section');
+        const nextSection = document.querySelector('#about');
         calculateFinalTitlePosition();
         if (nextSection) {
-            const extra_offset = 60;
-            const offsetPosition = nextSection.offsetTop - extra_offset;
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
+            // const extra_offset = 60;
+            // const offsetPosition = nextSection.offsetTop - extra_offset;
+            // window.scrollTo({
+            //     top: offsetPosition,
+            //     behavior: 'smooth'
+            // });
+            nextSection.scrollIntoView({
+                behavior: 'smooth',
             });
             // Dispatch custom event
             // Pass the calculated value with the custom event

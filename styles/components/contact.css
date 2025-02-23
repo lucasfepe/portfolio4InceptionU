@@ -29,3 +29,35 @@ button {
 button:hover {
     opacity: 0.9;
 }
+
+#contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.contact form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+form>* {
+    width: 100%;
+}

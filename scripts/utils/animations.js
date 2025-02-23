@@ -8,3 +8,4 @@ export const fadeUpAnimation = (element, delay) => {
         }, delay);
     }
 };
+

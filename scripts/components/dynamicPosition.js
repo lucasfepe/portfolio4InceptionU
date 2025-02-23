@@ -26,17 +26,9 @@ export function initDynamicPositioning() {
         }
     }
 
-    function handleScrollToAbout(event) {
-        const { finalTitleBottom } = event.detail;
-        setTimeout(() => {
-            adjustAboutContentPosition(finalTitleBottom);
-        }, 600); // Timing aligned with scroll and fade animations
-    }
-
     // Event listeners
     function initializeEventListeners() {
         window.addEventListener('resize', handleResize);
-        document.addEventListener('scrollToAbout', handleScrollToAbout);
     }
 
     // Initialize
