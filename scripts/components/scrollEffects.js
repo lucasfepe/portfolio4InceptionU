@@ -1,18 +1,16 @@
 import { fadeUpAnimation } from "../utils/animations.js";
+import { navigate } from "../utils/navigation.js";
 
 export function initScrollEffects() {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            navigate(e, document.querySelector(this.getAttribute('href')));
         });
     });
 
     // Select all sections except the home section
-    const sections = document.querySelectorAll('section:not(#home)');
+    const sections = document.querySelectorAll('#about');
 
     // Configuration for the IntersectionObserver
     // Triggers when at least 10% of the element is visible

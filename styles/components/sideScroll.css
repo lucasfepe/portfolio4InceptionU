@@ -1,6 +1,6 @@
 /* Core button styles */
 .side-scroll-arrow {
-    position: fixed;
+    position: absolute;
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
@@ -13,15 +13,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, visibility 1s ease, opacity 1s ease;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     animation: pulse 2s infinite;
 }
 
+/* For the sections containing the arrows */
+.section {
+    position: relative;
+    /* This ensures the arrow positions relative to its section */
+}
+
 /* Button interactions */
 .side-scroll-arrow:hover {
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(1.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 

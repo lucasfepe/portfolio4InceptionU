@@ -1,16 +1,7 @@
 import { fadeUpAnimation } from "../utils/animations.js";
+import { navigate } from "../utils/navigation.js";
 
 export let finalTitleBottom;
-
-function calculateFinalTitlePosition() {
-    const aboutTitle = document.querySelector('.about h2');
-    if (aboutTitle) {
-        // Get the absolute position relative to the document
-        const rect = aboutTitle.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        finalTitleBottom = rect.bottom + scrollTop;
-    }
-}
 
 export function initHeroEffects() {
     // Initial setup for hero section
@@ -19,24 +10,7 @@ export function initHeroEffects() {
 
     // Down Arrow functionality
     document.querySelector('.scroll-indicator button').addEventListener('click', () => {
-        const nextSection = document.querySelector('#about');
-        calculateFinalTitlePosition();
-        if (nextSection) {
-            // const extra_offset = 60;
-            // const offsetPosition = nextSection.offsetTop - extra_offset;
-            // window.scrollTo({
-            //     top: offsetPosition,
-            //     behavior: 'smooth'
-            // });
-            nextSection.scrollIntoView({
-                behavior: 'smooth',
-            });
-            // Dispatch custom event
-            // Pass the calculated value with the custom event
-            document.dispatchEvent(new CustomEvent('scrollToAbout', {
-                detail: { finalTitleBottom }
-            }));
-
-        }
-    });
+        navigate(null, document.querySelector('#about'));
+    }
+    );
 }
